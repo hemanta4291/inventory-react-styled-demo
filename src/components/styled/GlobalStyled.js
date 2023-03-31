@@ -18,6 +18,38 @@ body{
     
 }
 
+h2{
+    font-size: ${({theme})=>theme.fontSize.fs_32};
+    font-weight: ${({theme})=>theme.fontWeight.fw_700};
+    color: ${({theme})=>theme.color.text_primary};
+    line-height: ${({theme})=>theme.lineHeight.lh_34};
+}
+
+h3{
+    font-size: ${({theme})=>theme.fontSize.fs_28};
+    font-weight: ${({theme})=>theme.fontWeight.fw_700};
+    color: ${({theme})=>theme.color.text_primary};
+    line-height: ${({theme})=>theme.lineHeight.lh_32};
+}
+h4{
+    font-size: ${({theme})=>theme.fontSize.fs_24};
+    font-weight: ${({theme})=>theme.fontWeight.fw_700};
+    color: ${({theme})=>theme.color.text_primary};
+    line-height: ${({theme})=>theme.lineHeight.lh_30};
+}
+h5{
+    font-size: ${({theme})=>theme.fontSize.fs_20};
+    font-weight: ${({theme})=>theme.fontWeight.fw_700};
+    color: ${({theme})=>theme.color.text_primary};
+    line-height: ${({theme})=>theme.lineHeight.lh_20};
+}
+h6{
+    font-size: ${({theme})=>theme.fontSize.fs_20};
+    font-weight: ${({theme})=>theme.fontWeight.fw_700};
+    color: ${({theme})=>theme.color.text_primary};
+    line-height: ${({theme})=>theme.lineHeight.lh_24};
+}
+
 
 
 ol,

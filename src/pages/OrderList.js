@@ -8,7 +8,7 @@ import { DataTableCommonDesign } from '../components/styled/DataTable.styled';
 import { ProductWrapper } from '../components/styled/Product.styled';
 import TextField from '../components/TextField';
 
-const Products = () => {
+const OrderList = () => {
   const [modalOpen,setModalOpen] = useState(false)
   const [name,setName] = useState('')
   const [price,setPrice] = useState('')
@@ -84,10 +84,14 @@ const Products = () => {
       sortable: true,
     },
     {
+      name: 'Stock',
+      selector: row => row.stock,
+      sortable: true,
+    },
+    {
       name:"Action",
       cell: row => (
         <div className='data__table__action'>
-          <button className='view__btn'><FontAwesomeIcon icon="fa-solid fa-eye" /></button>
           <button className='edit__btn'><FontAwesomeIcon icon="fa-solid fa-edit" /></button>
           <button className='delete__btn'><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
         </div>
@@ -103,7 +107,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 2,
@@ -111,7 +116,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Lenevo',
       quentity:420,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 3,
@@ -119,7 +125,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Elitebook',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 4,
@@ -128,7 +135,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Elitebook',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 5,
@@ -137,7 +145,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 6,
@@ -145,7 +154,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 7,
@@ -153,7 +163,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 8,
@@ -161,7 +172,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Lenevo',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 9,
@@ -169,7 +181,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 10,
@@ -177,7 +190,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Del',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 11,
@@ -185,7 +199,8 @@ const Products = () => {
       category: 'Computer',
       brand:'HP',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
     {
       id: 12,
@@ -193,7 +208,8 @@ const Products = () => {
       category: 'Computer',
       brand:'Del',
       quentity:520,
-      price:55000
+      price:55000,
+      stock:4511
     },
   ]
 
@@ -226,8 +242,8 @@ const Products = () => {
   return (
     <ProductWrapper>
        <BaseHeaderTitle 
-       btnText="Add Product"
-       title="Product List" 
+       btnText="Add Order"
+       title="Order List" 
        subTitle="it is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
        handleClick={createProductHandler}
         />
@@ -248,7 +264,7 @@ const Products = () => {
 
         {
           modalOpen && 
-          <GlobalModal submit={handleSubmit} btnText="Create" handleclose={handleclose} open={modalOpen}>
+          <GlobalModal title="Add Order" submit={handleSubmit} btnText="Create" handleclose={handleclose} open={modalOpen}>
             <TextField onChange={(e)=>setName(e.target.value)} label="Name" type="text" placeholder="Enter Name" name="userName" value={name}/>
             <SelectGlobal value={selectCategory} label="Category" options={categories} onChange={handleSelectCategory}/>
             <SelectGlobal value={selectBrand} label="Brand" options={brands} onChange={handleSelectBrand}/>
@@ -261,4 +277,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default OrderList

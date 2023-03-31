@@ -15,6 +15,15 @@ export const Icons = {
       <path id="Path_9" data-name="Path 9" d="M384.375,347.118l-21.092-21.092,30.783-30.782,20.689.4.4,20.69Z" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
       <path id="Path_10" data-name="Path 10" d="M405.107,310.841a4.211,4.211,0,1,1,0-5.955A4.212,4.212,0,0,1,405.107,310.841Z" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
     </g>
-    </svg>
+    </svg>,
+    notificationIcon:<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+    </svg>,
+    messageIcon:<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+    </path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>,
 
 }

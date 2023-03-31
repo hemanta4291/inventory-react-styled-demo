@@ -11,6 +11,8 @@ import Products from './pages/Products';
 import Salse from './pages/Salse';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import DashboardOne from './pages/DashboardOne';
+import { DashboardMiddleContainer } from './components/styled/Dashboard.styled';
+import OrderList from './pages/OrderList';
 
 function App() {
   return (
@@ -20,14 +22,17 @@ function App() {
       <Router>
         <Header />
         <Sidenav/>
+        <DashboardMiddleContainer>
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard-one" element={<DashboardOne />} />
             <Route path="/product" element={<Products/>} />
             <Route path="/user" element={<User />} />
+            <Route path="/order" element={<OrderList />} />
             <Route path="/salse" element={<Salse />} />
             <Route path='*' element={<div>not fuound !</div>} />
           </Routes>
+          </DashboardMiddleContainer>
       </Router>
 
     </div>
