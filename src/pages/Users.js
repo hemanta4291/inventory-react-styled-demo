@@ -37,9 +37,9 @@ const User = () => {
     {
       cell: row => (
         <div className='data__table__action'>
-          <button className='view__btn'><FontAwesomeIcon icon="fa-solid fa-eye" /></button>
-          <button className='edit__btn'><FontAwesomeIcon icon="fa-solid fa-edit" /></button>
-          <button className='delete__btn'><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
+          <button onClick={(e)=>handleViewRowData(e,row)} className='view__btn'><FontAwesomeIcon icon="fa-solid fa-eye" /></button>
+          <button onClick={(e)=>handleEditRowData(e,row)} className='edit__btn'><FontAwesomeIcon icon="fa-solid fa-edit" /></button>
+          <button onClick={(e)=>handleDeleteRowData(e,row)} className='delete__btn'><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
         </div>
       )
     }
@@ -125,7 +125,16 @@ const User = () => {
     setUserEmail('')
   }
 
-  // console.log(userName)
+  // edit /view / delete operation
+  const handleViewRowData = (e,rowData) =>{
+    console.log(rowData)
+  }
+  const handleEditRowData = (e,rowData) =>{
+    console.log(rowData)
+  }
+  const handleDeleteRowData = (e,rowData) =>{
+    console.log(rowData)
+  }
   return (
     <div>
       <BaseHeaderTitle 

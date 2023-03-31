@@ -1,18 +1,20 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Icons } from '../components/Icons'
 import SidebarMenu from '../components/SidebarMenu'
 import { SidenavWrapper } from '../components/styled/Sidenav.styled'
 import { sidebar } from '../demo-data/DemoData'
 
-const Sidenav = () => {
+const Sidenav = ({handleToggle,toggleOpen}) => {
     const [sidebarData, setSidebarData] = useState(sidebar)
-
+   
     return (
-        <SidenavWrapper>
-            <div className='side__logo'>
-                <h2>Inventory</h2>
-                <span>{Icons.toggleIcon}</span>
+        <SidenavWrapper toggleOpenAt={toggleOpen}>
+            <div className={"side__logo " + (toggleOpen ? "toggle__active" : "toggle__deactive")}>
+                <span className='side__collapse__logo'>{Icons.saleIcon}</span>
+                 <h4 className='side__collapse_title'>Inventory</h4>
+                
+                <span className='toggle__btn' onClick={handleToggle}><FontAwesomeIcon width='25px' icon="fa-solid fa-angle-left" /></span>
             </div>
             <ul>
                 {

@@ -92,8 +92,8 @@ const OrderList = () => {
       name:"Action",
       cell: row => (
         <div className='data__table__action'>
-          <button className='edit__btn'><FontAwesomeIcon icon="fa-solid fa-edit" /></button>
-          <button className='delete__btn'><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
+          <button onClick={(e)=>handleEditRowData(e,row)} className='edit__btn'><FontAwesomeIcon icon="fa-solid fa-edit" /></button>
+          <button onClick={(e)=>handleDeleteRowData(e,row)} className='delete__btn'><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
         </div>
       )
     }
@@ -237,6 +237,14 @@ const OrderList = () => {
 
   const handleSelectBrand = (e) =>{
     setSelectBrand(e.target.value)
+  }
+
+
+  const handleEditRowData = (e,rowData) =>{
+    console.log(rowData)
+  }
+  const handleDeleteRowData = (e,rowData) =>{
+    console.log(rowData)
   }
 
   return (

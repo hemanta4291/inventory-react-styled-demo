@@ -2,9 +2,9 @@ import React from 'react'
 import { Icons } from '../components/Icons'
 import { HeaderWrapper } from '../components/styled/Header.styled'
 
-const Header = () => {
+const Header = ({toggleOpen}) => {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper toggleOpenAt={toggleOpen}>
         <div className='header__container'>
             <span>{Icons.messageIcon}</span>
             <span>{Icons.notificationIcon}</span>

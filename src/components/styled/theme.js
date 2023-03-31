@@ -18,6 +18,7 @@ export const themeOne = {
     breakPoint:{
         "large":"1200px",
         "tab":"992px",
+        "tab2":"1024px",
         "mobile":"768px",
         "small":"576px",
         "mobileExtra":"300px"

@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import BarChart from '../components/BarChart'
 import CardTitleWithIcon from '../components/CardTitleWithIcon'
+import PurchaseSales from '../components/PurchaseSales'
+import StatisticalReport from '../components/StatisticalReport'
 import { DashboardProductQuantity, DashboardTop, DashboardWrapper } from '../components/styled/Dashboard.styled'
 
 const Dashboard = () => {
@@ -26,7 +28,7 @@ const Dashboard = () => {
               total="540"
             />
             <CardTitleWithIcon
-              icon={<FontAwesomeIcon icon="fa-light fa-satellite" />}
+              icon={<FontAwesomeIcon icon="fa-fas fa-scale-balanced" />}
               type="success"
               title="Total Sales" 
               total="541000"
@@ -36,7 +38,10 @@ const Dashboard = () => {
 
         <DashboardProductQuantity>
             <BarChart/>
+            <PurchaseSales/>
         </DashboardProductQuantity>
+
+        <StatisticalReport/>
         
         
     </DashboardWrapper>

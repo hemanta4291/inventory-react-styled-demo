@@ -6,24 +6,8 @@ export const sidebar = [
         to:"/dashboard",
         title:"Dashbaord",
         icon:Icons.dashboardIcon,
-        dropdown:true,
+        dropdown:false,
         dropdownItems:[
-            {
-                id:1,
-                to:"/dashboard/dashboard-one",
-                title:"Dashboard 1",
-                icon:Icons.dashboardIcon,
-                dropdown:false,
-                dropdownItems:[]
-            },
-            {
-                id:2,
-                to:"/dashboard/dashboard-one",
-                title:"Dashboard 1",
-                icon:Icons.dashboardIcon,
-                dropdown:false,
-                dropdownItems:[]
-            },
         ]
     },
     {
